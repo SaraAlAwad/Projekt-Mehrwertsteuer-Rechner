@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h1>Mehrwertsteuer-Rechner</h1>
+        <h3>Was soll berechnet werden</h3>
+        <form action="" onsubmit="return false">
+            <article>
+                <input type="radio" name="nettotoBrutto" id="nettotoBrutto">
+                <label for="nettotoBrutto"> Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                <input type="radio" name="nettotoBrutto" id="bruttotoNetto">
+                <label for="bruttotoNetto"> Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </article>
+            <article>
+                <p>Mehrwertsteuersatz</p>
+                <input type="radio" name="mw" id="mw19">
+                <label for="mw19"> 19 % </label>
+                <input type="radio" name="mw" id="mw7">
+                <label for="mw7"> 7 % </label>
+            </article>
+            <article>
+                <p class="smaller">Nettobetrag (Preis ohne Mehrwertsteuer) in Euros <span>*</span> </p>
+                <input type="number" name="amount" id="amount"> <input type="submit" value="BERECHNEN" onclick="calc()">
+            </article>
+            <h2>Ergebnis</h2>
+            <article class="result">
+                <div>
+                    <p>Mehrwertsteuerbetrag</p>
+                    <p id="mwAmount"></p>
+                </div>
+                <div class="brutto">
+                    <p>Bruttobetrag (Endprise)</p>
+                    <p id="bruttoBetrag"></p>
+                </div>
+                <div id="netto" class="netto">
+                    <p>Nettobetrag</p>
+                    <p id="nettoBetrag"></p>
+                </div>
+                <div id="output"></div>
+            </article>
+        </form>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
